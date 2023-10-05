@@ -1,0 +1,136 @@
+@import "./globals";
+
+
+.container {
+
+    
+    height: 100%;
+
+    .get-pokemon-button {
+        margin-top: 200px;
+        text-align: center;
+        margin-bottom: 50px;
+        
+        >button {
+
+            padding: 10px 25px;
+            border: none;
+            background-color: #509402;
+            color: rgb(247, 247, 247);
+            border-radius: 5px;
+        
+        }
+    }
+
+    .error-message {
+        text-align: center;
+        font-size: 1.5rem;
+        color: rgb(255, 57, 57);
+        margin: 0;
+        
+
+    }
+
+    .pokemon-container {
+        
+        margin-top: 75px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 350px));
+        gap: 30px;
+        padding: 30px;
+
+        
+
+        .pokemon-card {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.116);
+            border-radius: 25px;
+            padding: 30px;
+            opacity: 0%;
+            transition: 0.5s ease-in-out;
+            text-align: center;
+            background-color: rgb(245, 244, 244);
+
+            &:hover {
+            cursor: pointer;
+
+                .background {
+                    height: 120%;
+
+                }
+            }
+
+            .background {
+                position: absolute;
+                width: 100%;
+                height: 0%;
+                bottom: -10px;
+                left: 0;
+                transform: translateY(21px);
+                background-color: #003a70;
+                padding: 10px;
+                transition: 0.5s ease-in-out;
+                opacity: 95%;
+
+                .stats-container {
+
+                    padding: 30px;
+
+                    .stats {
+                        margin-top: 12px;
+                        display: flex;
+                        color: white;
+                        text-align: start;
+                        width: 100%;
+    
+                        .stat-name {
+                            margin: 0;
+                        }
+    
+                        .stat-value {
+                            margin: 0;
+                            margin-left: 15px;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .pokemon-id {
+                    position: absolute;
+                    top: 50px;
+                    right: 30px;
+                    color: white;
+                }
+            }
+
+
+
+            
+
+            >h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .types {
+                
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 15px;
+
+
+                >div {
+                    font-size: 14px;
+                    padding: 4px 10px;
+                    border-radius: 25px;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
